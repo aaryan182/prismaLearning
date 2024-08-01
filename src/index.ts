@@ -40,3 +40,5 @@ async function updateUser(username: string, {
     }
   })
 }
+
+updateUser("test1", { firstName: "test", lastName: "test" })
