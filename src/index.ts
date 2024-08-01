@@ -32,13 +32,15 @@ async function updateUser(username: string, {
     firstName,
     lastName
 }: UpdateParams) {
-  prisma.user.update({
+ const res = await prisma.user.update({
     where: { email: username },
     data: {
       firstName,
       lastName
     }
   })
+  console.log(res);
+  
 }
 
 updateUser("test1", { firstName: "test", lastName: "test" })
