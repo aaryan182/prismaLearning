@@ -33,7 +33,7 @@ async function updateUser(username: string, {
     lastName
 }: UpdateParams) {
   prisma.user.update({
-    where: { username: username },
+    where: { email: username },
     data: {
       firstName,
       lastName
